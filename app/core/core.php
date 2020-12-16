@@ -54,7 +54,7 @@
                     $this->method = 'index';
                 }
             }
-            
+        
             return call_user_func(array(new $this->controller, $this->method), $this->params);
          
         }
