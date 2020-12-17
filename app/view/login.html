@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+    <html>
+        <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">    
+        <link rel="stylesheet" href="http://localhost/Login+Mvc/assets/css/style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        </head>
+        <body>
+            <div class="box-login">
+                <div class="capa"></div>
+            <h1>Faça seu Login</h1>
+
+            <form method="POST" action="http://localhost/Login+Mvc/login/check">
+                <input type="email" name='email' placeholder="E-MAIL">
+                <input type="password" name="password" placeholder="SENHA">
+
+                <button class="btn-login">Logar</button>
+                {%if error != '' %}
+                    <sp1an class="msg_error">
+                        <i class="fa fa-exclamation-triangle" style="font-size: 16px; color:#FF6d6d; padding-right:5px;"></i>
+                        <p>Tentativa Inválida</p>
+                    </span>
+                {% endif %}
+            </form>
+        </body>
+    </html>
