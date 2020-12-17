@@ -27,4 +27,15 @@
             
         }
 
+        public function cadastro(){
+            $this->url= $_GET;
+
+            if ($this->url == 'http://localhost/login+MVC/cadastro/index') {
+
+                return header('Location:http://localhost/login+MVC/cadastro/index');
+            }
+            
+        }
+
+
     }
