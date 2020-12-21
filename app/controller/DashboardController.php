@@ -1,6 +1,9 @@
 <?php
-    class DashboardController{
+    
+    use Miguel\Database\Connection;
 
+    class DashboardController{
+        private $retorno;
         public function index(){
 
             $loader = new \Twig\Loader\FilesystemLoader('app/view');
@@ -21,5 +24,20 @@
 
             header('Location: http://localhost/Login+Mvc');
         }
+        
+        public function adicionarController($name, $email, $password){
 
+            $user = new User();
+
+            if (!empty($_POST['email'])) {
+
+                $name = $_POST['name'];
+                $email = $_POST['email'];
+                $password = $_POST['password'];
+            
+                $user->adicionar($name, $email, $password);
+            }
+            
+        }
+    
     }

@@ -6,7 +6,8 @@
         private $params = array();
         private $user;
         private $error;
-        
+        private $retorno;
+
         public function __construct()
         {
             $this->user = $_SESSION['usr'] ?? null;
@@ -55,8 +56,7 @@
                 }
             }
             
-            return call_user_func(array(new $this->controller, $this->method), $this->params);
-         
+            return call_user_func(array(new $this->controller, $this->method), $this->params, $this->params);
         }
         
     }

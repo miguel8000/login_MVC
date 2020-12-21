@@ -55,6 +55,19 @@ use Miguel\Database\Connection;
         public function getPassword(){
             return $this->password;
         }
+        public function adicionar($name, $email, $password){
+               
+             $conn = Connection::getConn();
+
+				$sql = "INSERT INTO user (name ,email, password) VALUES (:name, :email, :password)";
+                $sql = $conn->prepare($sql);
+                $sql->bindValue(':name', $name);
+                $sql->bindValue(':email', $email);
+				$sql->bindValue(':password', $password);			
+                $sql->execute();
+
+	
+		}
 
 
     }

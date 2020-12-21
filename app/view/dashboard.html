@@ -15,7 +15,13 @@
 
             <section class="box_dashboard">
                 <div class="content_area">
-                    <h1>Dashboard</h1>
+                    <form method="POST" action="http://localhost/Login+Mvc/dashboard/adicionarController">
+                        <input type="text" name='name' placeholder="NOME">
+                        <input type="email" name='email' placeholder="E-MAIL">
+                        <input type="password" name="password" placeholder="SENHA">
+        
+                        <button class="btn-login">Logar</button>
+                    </form>
                 </div>
             </section>
         </body>

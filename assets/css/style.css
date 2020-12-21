@@ -1,65 +1,158 @@
-*{
+* {
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: sans-serif;
+    font-size: 14px;
 }
-body{
-    height: 100vh;
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    background-color: rgb(243, 243, 243);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.instagram-wrapper {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-family: 'Arial';
+    width: 60%;
+    height: 100vh;
 }
-.box-login{
-    width: 500px;
-    height: 500px;
-    background-color: #6D4BFC;
-    border: 0;
-    border-radius: 10px 10px 10px 10px;
+
+.instagram-phone {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
 }
-.box-login .capa{
-    height: 230px;
-    background: url(../img/capa.jfif);
-    background-size: 100%;
-    background-repeat: no-repeat;
-    border-radius: 10px 10px 0px 0px;
+
+.instagram-phone img {
+    height: 50rem;
 }
-h1{
-    font-size: 24px;
-    color: #fff;
-    text-align: left;
-    margin: 15px 0px 20px 15px;
-    font-weight: 500;
+
+.instagram-continue {
+    display: flex;
+    align-items: center; /* horizontal */
+    justify-content: space-around; /* vertical */
+    flex-direction: column;
+    width: 50%;
+    min-height: 34rem;
+}
+
+.group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    background-color: #ffffff;
+    width: 100%;
+    padding: 1.3rem 0;
+    border: 1px solid lightgray;
+}
+
+.group:nth-child(1) {
+    min-height: 19rem;
+}
+
+.instagram-logo {
+    height: 3rem;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    justify-content: center;
 }
 form input{
-    margin: 0px 20px;
-    width: calc(100% - 64px);
-    padding: 10px 15px;
-    border: 0;
-    border-radius: 10px;
+    width: 100%;
+    padding: 9px 0px 7px 8px;
+    border: 1px solid lightgray;
+    border-radius: 3px;
     margin-bottom: 20px;
     text-align: center;
-    color: #6D4BFC;
+    outline-color: rgb(170, 170, 170);
+    outline-width: 0.5px;
 }
  form .btn-login{
-    width: calc(100% - 40px);
-     margin: 0px 20px;
-     background: #3CEB88;
+     width: 100%;
+     background-color: #0095f6;
      color: #fff;
-     padding: 10px 15px;
+     padding: 9px 0px 7px 8px;
      border: 0;
-     border-radius: 10px;
+     border-radius: 3px;
      margin-bottom: 20px;
+     outline-color: rgb(170, 170, 170);
+     outline-width: 0.5px;
 }
 .msg_error{
     color: #FF6d6d;
     display: flex;
     justify-content: center;
 }
+.get-the-app {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 1.3rem 0;
+}
 
-@media (min-width:480px){
-    .box-login .capa{
-        background: url(../img/capa.jfif);
-        background-size: 100%;
-        background-repeat: no-repeat;
+.download {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 1rem;
+}
+
+.app-download {
+    height: 3rem;
+    width: 10rem;
+    background-size: cover;
+}
+
+.app-download:nth-child(1) {
+    background-image: url('http://localhost/Login+Mvc/assets/img/apple-button.png');
+}
+
+.app-download:nth-child(2) {
+    background-image: url('http://localhost/Login+Mvc/assets/img/googleplay-button.png');
+}
+
+/* media queries */
+
+
+@media (max-width: 1024px) {
+    .instagram-wrapper {
+        width: 90%;
+    }
+}
+
+@media (max-width: 650px) {
+    body {
+        background-color: #ffffff;
+    }
+
+    .instagram-wrapper {
+        width: 90%;
+    }
+
+    .instagram-phone {
+        display: none;
+    }
+
+    .instagram-continue {
+        width: 100%;
+    }
+    
+    .group {
+        border: 1px solid transparent;
     }
 }
